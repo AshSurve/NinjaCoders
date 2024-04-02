@@ -47,7 +47,7 @@ public class HomePage extends DriverManager{
 	}
 	public void warningMsg() {
 		String msg="You are not logged in";
-		PageFactory.initElements(driver, alert);
+		//PageFactory.initElements(driver, alert);
 		String Alert=alert.getText();
 		if(msg.equals(Alert))
 		{	
