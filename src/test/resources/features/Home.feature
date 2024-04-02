@@ -50,7 +50,7 @@ Feature: User launch dsalgo application and test Home page
     Examples: 
       | option     |
       | Arrays     |
-      | Linkedlist |
+      | Linked List|
       | Stack      |
       | Queue      |
       | Tree       |

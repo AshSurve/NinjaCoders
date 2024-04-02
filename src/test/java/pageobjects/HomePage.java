@@ -47,14 +47,14 @@ public class HomePage extends DriverManager{
 	}
 	public void warningMsg() {
 		String msg="You are not logged in";
-		
-		String Alert=driver.findElement(By.xpath("//div[contains(text(),'not logged')]")).getText();
+		PageFactory.initElements(driver, alert);
+		String Alert=alert.getText();
 		if(msg.equals(Alert))
-		{
+		{	
 			System.out.println("------------------");
 			System.out.println("look for this message --> "+Alert);
 			dsalgohomepage();
-
+			
 		}
 	}
 
@@ -71,7 +71,7 @@ public class HomePage extends DriverManager{
 				System.out.println("clicking for "+string);
 
 				ele.click();
-				warningMsg();
+				
 				break;
 			}
 		}
