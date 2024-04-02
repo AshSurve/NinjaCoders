@@ -2,13 +2,14 @@ package pageobjects;
 
 import java.util.List;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import hooks.DriverManager;
+import log.LoggerLoad;
+
 
 public class HomePage extends DriverManager{
 
@@ -42,7 +43,8 @@ public class HomePage extends DriverManager{
 	public void getStarted() {
 		getStarted.click();
 	}
-	public void getStartedhome() {
+	public void getStartedhome(String string) {
+		LoggerLoad.info("\n-- click getStarted "+string);
 		getStartedhome.click();
 	}
 	public void warningMsg() {
@@ -51,8 +53,9 @@ public class HomePage extends DriverManager{
 		String Alert=alert.getText();
 		if(msg.equals(Alert))
 		{	
-			System.out.println("------------------");
-			System.out.println("look for this message --> "+Alert);
+			LoggerLoad.error("\n-- message -->\n"+Alert);
+			
+			//System.out.println("look for this message --> "+Alert);
 			dsalgohomepage();
 			
 		}
@@ -67,8 +70,9 @@ public class HomePage extends DriverManager{
 		for(WebElement ele:DS)
 		{
 			if(ele.getText().equalsIgnoreCase(string))
-			{
-				System.out.println("clicking for "+string);
+			{	
+				LoggerLoad.info("\n-- click for "+string);
+				//System.out.println("clicking for "+string);
 
 				ele.click();
 				

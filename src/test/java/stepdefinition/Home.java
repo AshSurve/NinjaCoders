@@ -34,7 +34,7 @@ public class Home {
 	@When("The user clicks on Get Started link on homepage {string} without login")
 	public void the_user_clicks_on_get_started_link_on_homepage_without_login(String string) {
 		
-		home.getStartedhome();
+		home.getStartedhome(string);
 	}
 
 	@Then("The user get warning message {string}")
