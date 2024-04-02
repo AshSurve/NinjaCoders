@@ -14,68 +14,60 @@ public class Home {
 	    // Write code here that turns the phrase above into concrete actions
 		
 		home.dsalgopage();
-		
-	    throw new io.cucumber.java.PendingException();
 	}
 
 	@When("The user clicks the {string} button")
 	public void the_user_clicks_the_button(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		home.getStarted();
 	}
 
 	@Then("The user should be redirected to homepage")
 	public void the_user_should_be_redirected_to_homepage() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   home.dsalgohomepage();
 	}
 
 	@Given("The user is on Home page")
 	public void the_user_is_on_home_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		 home.dsalgohomepage();
 	}
 
 	@When("The user clicks on Get Started link on homepage {string} without login")
 	public void the_user_clicks_on_get_started_link_on_homepage_without_login(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		
+		home.getStartedhome();
 	}
 
 	@Then("The user get warning message {string}")
 	public void the_user_get_warning_message(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		
+		home.warningMsg();
+		
+	
 	}
 
 	@When("The user clicks on dropdown {string}")
 	public void the_user_clicks_on_dropdown(String string) {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   home.DSdropDown(string);
 	}
-
+	
 	@When("The user clicks on signin link")
 	public void the_user_clicks_on_signin_link() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	    home.SignIn();
 	}
 
 	@Then("The user redirected to login page")
 	public void the_user_redirected_to_login_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   home.Login();
 	}
 
 	@When("The user clicks on register link")
 	public void the_user_clicks_on_register_link() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+	   home.Register();
 	}
 
 	@Then("The user redirected to Registration page")
 	public void the_user_redirected_to_registration_page() {
-	    // Write code here that turns the phrase above into concrete actions
-	    throw new io.cucumber.java.PendingException();
+		home.Registerpage();
 	}
 
 
