@@ -6,8 +6,9 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
 		plugin= {"pretty","html:target/DsAlgo.html","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-		monochrome=false,
+		monochrome=true,
 		tags="@home",
+		dryRun=false,
 		features= {"src/test/resources/features"},
 		glue={"stepdefinition","hooks"}
 		)

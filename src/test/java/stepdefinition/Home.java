@@ -11,8 +11,7 @@ public class Home {
 	HomePage home = new HomePage();
 	@Given("The user opens DS Algo portal link")
 	public void the_user_opens_ds_algo_portal_link() {
-	    // Write code here that turns the phrase above into concrete actions
-		
+	   
 		home.dsalgopage();
 	}
 
@@ -40,9 +39,8 @@ public class Home {
 	@Then("The user get warning message {string}")
 	public void the_user_get_warning_message(String string) {
 		
-		home.warningMsg();
-		
-	
+		home.warningMsg(string);
+
 	}
 
 	@When("The user clicks on dropdown {string}")

@@ -8,7 +8,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import hooks.DriverManager;
-import log.LoggerLoad;
+import junit.framework.Assert;
+import utilities.LoggerLoad;
 
 
 public class HomePage extends DriverManager{
@@ -47,18 +48,14 @@ public class HomePage extends DriverManager{
 		LoggerLoad.info("\n-- click getStarted "+string);
 		getStartedhome.click();
 	}
-	public void warningMsg() {
-		String msg="You are not logged in";
-		//PageFactory.initElements(driver, alert);
+	public void warningMsg(String msg) {
+		
 		String Alert=alert.getText();
-		if(msg.equals(Alert))
-		{	
+		Assert.assertEquals(msg, Alert);
+
 			LoggerLoad.error("\n-- message -->\n"+Alert);
-			
-			//System.out.println("look for this message --> "+Alert);
 			dsalgohomepage();
-			
-		}
+
 	}
 
 	public void DSdropDown(String string) {
@@ -72,8 +69,6 @@ public class HomePage extends DriverManager{
 			if(ele.getText().equalsIgnoreCase(string))
 			{	
 				LoggerLoad.info("\n-- click for "+string);
-				//System.out.println("clicking for "+string);
-
 				ele.click();
 				
 				break;
@@ -93,5 +88,8 @@ public class HomePage extends DriverManager{
 	}
 	public void Registerpage() {
 		driver.navigate().to(RegisterUrl);
+		String title=driver.getTitle();
+		LoggerLoad.info("you are on "+title+" page");
+		Assert.assertEquals(title,"Registration");
 	}
 }
