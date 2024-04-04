@@ -56,7 +56,7 @@ Feature: User launch dsalgo application and test Home page
       | Tree       |
       | Graph      |
 
-  @home4
+  @homepage
   Scenario: User is on Home page and click on sign in
     Given The user is on Home page
     When The user clicks on signin link

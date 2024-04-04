@@ -11,6 +11,7 @@ import org.testng.Assert;
 
 import hooks.DriverManager;
 import io.cucumber.datatable.DataTable;
+import utilities.LoggerLoad;
 
 
 public class RegisterPage {
@@ -44,7 +45,7 @@ public class RegisterPage {
 
 		WebElement activeElement = driver.switchTo().activeElement();
 		String messageStr = activeElement.getAttribute("validationMessage");
-		System.out.println("Actual message appeared on screen: " + messageStr);
+		LoggerLoad.info("Actual message appeared on screen: " + messageStr);
 		Assert.assertEquals(messageStr, "Please fill out this field.");
 
 	}
