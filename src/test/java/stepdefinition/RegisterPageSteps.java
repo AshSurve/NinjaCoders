@@ -16,7 +16,7 @@ public class RegisterPageSteps {
 
 	// @register1
 	@Given("The user opens Register Page")
-	public void the_user_opens_register_page() {
+	public void The_user_opens_Register_Page() {
 		
 	    regPg.gotoRegPage();
 	}
