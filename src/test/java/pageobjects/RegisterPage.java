@@ -45,7 +45,7 @@ public class RegisterPage {
 
 		WebElement activeElement = driver.switchTo().activeElement();
 		String messageStr = activeElement.getAttribute("validationMessage");
-		LoggerLoad.info("Actual message appeared on screen: " + messageStr);
+		LoggerLoad.info("\nActual message appeared on screen: " + messageStr);
 		Assert.assertEquals(messageStr, "Please fill out this field.");
 
 	}

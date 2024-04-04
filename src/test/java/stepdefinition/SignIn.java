@@ -34,7 +34,7 @@ public class SignIn {
 		Assert.assertEquals(title,"Login");
 		LoggerLoad.info("User is on Login Page");
 	}
-	@When("user enters {string} and {string} in step and user click on login button")
+	@When("user enters username as{string} and password as{string} in step and user click on login button")
 	public void user_enters_and_in_step_and_user_click_on_login_button(String string, String string2) {
 		login.Enterlogininfo(string,string2);
 

@@ -10,7 +10,7 @@
   	@Signin2
  	  Scenario Outline: login or sign in
     Given user is on login page
-    When user enters "<username>" and "<password>" in step and user click on login button
+    When user enters username as"<username>" and password as"<password>" in step and user click on login button
     Then user verify the "<Expectedmessage>" in step
 
     Examples: 
