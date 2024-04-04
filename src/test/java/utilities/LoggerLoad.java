@@ -1,10 +1,14 @@
 package utilities;
 
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 
 public  class LoggerLoad{
 
-	public static Logger logger = Logger.getLogger(LoggerLoad.class);
+//	public static Logger logger = Logger.getLogger(LoggerLoad.class);
+	private static Logger logger = LogManager.getLogger();
 		
 		 public static void info(String message) {
 
