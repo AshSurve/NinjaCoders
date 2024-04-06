@@ -20,7 +20,7 @@ public class RegisterPageSteps {
 		
 	    regPg.gotoRegPage();
 	}
-
+    // @register2 
 	@When("The user clicks {string} button with all fields empty")
 	public void the_user_clicks_button_with_all_fields_empty(String string) {
 	    
@@ -177,10 +177,11 @@ public class RegisterPageSteps {
 	@Then("It should display error message as {string}")
 	public void it_should_display_error_message_as(String expErrMsg) {
 		try {
-			String msg=regPg.readErrorMsg();
-		assertEquals(msg, expErrMsg);
+		 
+			String msg1=regPg.readErrorMsg();
+		assertEquals(msg1, expErrMsg);
 		System.out.println(expErrMsg);
-		System.out.println(msg);
+		System.out.println(msg1);
 		}
 		catch (Exception e) {
 			// TODO Auto-generated catch block
