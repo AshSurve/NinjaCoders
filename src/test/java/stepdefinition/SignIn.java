@@ -21,6 +21,8 @@ public class SignIn {
 	Reusablepageobjects reuse=new Reusablepageobjects();
 	SigninPage login=new SigninPage();
 	@FindBy(xpath="//div[@role='alert']")public WebElement alert;
+	@FindBy(xpath="//a[text()='Sign out']")public WebElement signout;
+
 	
 	public SignIn(){
 		PageFactory.initElements(driver, this);
@@ -73,5 +75,20 @@ public class SignIn {
 	@Then("User redirected to Registration page")
 	public void user_redirected_to_registration_page() {
 		reuse.Registerpage();
+	}
+	
+	
+	@Given("user is on Registration page")
+	public void user_is_on_registration_page() {
+		reuse.Registerpage();
+	}
+	@When("User clicks on singout")
+	public void user_clicks_on_singout() {
+		signout.click();
+	
+	}
+	@Then("User redirected to Home page")
+	public void user_redirected_to_home_page() {
+		reuse.dsalgohomepage();
 	}
 }

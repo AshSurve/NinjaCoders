@@ -27,3 +27,9 @@
     Given user is on login page  
     When User clicks on Register  
     Then User redirected to Registration page
+    
+    @Signin4
+    Scenario: Sign out
+    Given user is on Registration page  
+    When User clicks on singout  
+    Then User redirected to Home page
